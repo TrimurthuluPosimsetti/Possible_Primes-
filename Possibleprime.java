@@ -27,6 +27,7 @@ class Main {
     a[1]=0;
     for(int i=2;i<n;i++){
       if(a[i]==1){
+        //System.out.println(i);
         for(int j=2;(i*j)<n;j++){
           a[i*j]=0;
         }
@@ -49,10 +50,12 @@ class Main {
             if(c[j]!=0){
               s=s+String.valueOf(c[j]);}
           }
+          //System.out.println(s);
           //System.out.println(s+" "+c.length);
+          if(s!=""){
           if(a[Integer.parseInt(s)]==1){
             System.out.println(s);
-          }
+          }}
           else{
           possiblePrimes(a,c,in+1,b);
           c[in+1]=0;}
