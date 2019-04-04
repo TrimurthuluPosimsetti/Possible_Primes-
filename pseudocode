@@ -1,0 +1,23 @@
+Algorithm backtracking(a, c, ind, n) {
+    //using backtracking it prints all possible solutions
+    for i in n - 1 do {
+        if place(c, a[i]) then {
+            c[ind] = a[i];
+            if (c.length = n) then {
+                then write(c[1: n]);
+            }
+            else {
+                backtracking(a, c, ind + 1, n);
+                a[ind + 1] = '';
+            }
+        }
+    }
+}
+
+Algorithm place(c, v) {
+    //return true if v can be placed in c array when v doesn't exits in the c array already, otherwise it returns false
+    for i in n do
+            if (c[i] == v)
+                return false;
+        return true;
+}
